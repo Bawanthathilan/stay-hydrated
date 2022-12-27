@@ -9,14 +9,10 @@ document.getElementById('dateval').addEventListener('click', function() {
 
 function myFunction() {
     var inputTime = document.getElementById("dateInput").value;
-    if (inputTime) {
-        inputTime = inputTime;
-      } else {
-        inputTime = 30;
-      }
+    
 
     chrome.alarms.create('testAlarm', {
-        periodInMinutes: inputTime 
+        periodInMinutes: Number(inputTime) 
     });
 };
 
